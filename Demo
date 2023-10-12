@@ -1,0 +1,27 @@
+package movie_database_app;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Movie movie = new Movie(10000, "R", "Hereditary");
+		Action action = new Action(20000, "G", "Spiderman");
+		Comedy comedy = new Comedy(30000, "R", "Parasite");
+		Drama drama = new Drama(40000, "PG-13", "Moonrise Kingdom");
+
+		System.out.println(movie);
+		System.out.println("Late Fee: $" + movie.calcLateFees(1));
+
+		System.out.println(action);
+		System.out.println("Late Fee: $" + action.calcLateFees(1));
+
+		System.out.println(comedy);
+		System.out.println("Late Fee: $" + comedy.calcLateFees(1));
+
+		System.out.println(drama);
+		System.out.println("Late Fee: $" + drama.calcLateFees(1));
+
+		boolean result = movie.equals(action);
+		System.out.println(("\nID numbers identical: " + result));
+
+	}
+}
