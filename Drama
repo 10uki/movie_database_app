@@ -1,0 +1,15 @@
+package movie_database_app;
+
+public class Drama extends Movie {
+	public Drama() {
+		super();
+	}
+
+	public Drama(int IDnumber, String Rating, String movieTitle) {
+		super(IDnumber, Rating, movieTitle);
+	}
+
+	public double calcLateFees(int days) {
+		return 2.0 * days;
+	}
+}
