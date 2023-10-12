@@ -1,0 +1,57 @@
+package movie_database_app;
+
+public class Movie {
+	private int IDnumber;
+	private String Rating;
+	private String movieTitle;
+
+	public Movie() {
+		IDnumber = 0;
+		Rating = " ";
+		movieTitle = " ";
+	}
+
+	public Movie(int IDnumber, String Rating, String movieTitle) {
+		this.IDnumber = IDnumber;
+		this.Rating = Rating;
+		this.movieTitle = movieTitle;
+	}
+
+	public int getIDnumber() {
+		return IDnumber;
+	}
+
+	public void setIDnumber(int IDnumber) {
+		this.IDnumber = IDnumber;
+	}
+
+	public String getRating() {
+		return Rating;
+	}
+
+	public void setRating(String Rating) {
+		this.Rating = Rating;
+	}
+
+	public String getMovieTitle() {
+		return movieTitle;
+	}
+
+	public void setMovieTitle(String movieTitle) {
+		this.movieTitle = movieTitle;
+	}
+
+	public double calcLateFees(int days) {
+		return 2.0 * days;
+	}
+
+	@Override
+	public boolean equals(Object other) {
+		Movie checkIdNumber = (Movie) other;
+		return checkIdNumber.IDnumber == IDnumber;
+	}
+
+	public String toString() {
+		return "\nMovie Title: " + movieTitle + "\nMPAA Rating: " + Rating + "\nID Number: " + IDnumber;
+	}
+}
