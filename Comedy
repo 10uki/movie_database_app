@@ -1,0 +1,15 @@
+package movie_database_app;
+
+public class Comedy extends Movie {
+	public Comedy() {
+		super();
+	}
+
+	public Comedy(int IDnumber, String Rating, String movieTitle) {
+		super(IDnumber, Rating, movieTitle);
+	}
+
+	public double calcLateFees(int days) {
+		return 2.5 * days;
+	}
+}
